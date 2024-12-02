@@ -736,7 +736,7 @@ body {
 /* General Footer Styles */
 /* General Footer Styles */
 .footer {
-  background: url('/autofix/assets/images/footer-bg.jpg') no-repeat center/cover;
+  background: url('/assets/images/footer-bg.jpg') no-repeat center/cover;
   padding: 60px 20px 40px;
   position: relative;
   overflow: hidden;

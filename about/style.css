@@ -456,7 +456,7 @@
     width: 100%;
     height: 400px;
     background: #0d0d0d;
-    background-image: url('/autofix/assets/images/about-us-banner.jpg'); /* Replace with an actual image */
+    background-image: url('/assets/images/about-us-banner.jpg'); /* Replace with an actual image */
     background-position: right;
     background-repeat: no-repeat;
     background-size:100%;
@@ -960,7 +960,7 @@
   /* General Footer Styles */
 /* General Footer Styles */
 .footer {
-    background: url('/autofix/assets/images/footer-bg.jpg') no-repeat center/cover;
+    background: url('/assets/images/footer-bg.jpg') no-repeat center/cover;
     padding: 60px 20px 40px;
     position: relative;
     overflow: hidden;
