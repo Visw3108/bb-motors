@@ -61,3 +61,45 @@ brands.forEach((brand) => {
 
 // Start the carousel with a pause between movements
 setInterval(moveCarousel, 2000); // Adjust interval (ms) for pause timing
+
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  const counters = document.querySelectorAll('.strong');
+
+  const countUp = (element) => {
+    const target = parseInt(element.getAttribute('data-count'));
+    let current = 0;
+    const increment = target / 100; // Adjust this for speed
+
+    const updateCounter = () => {
+      if (current < target) {
+        current += increment;
+        element.textContent = Math.floor(current) + "+";
+        requestAnimationFrame(updateCounter);
+      } else {
+        element.textContent = target + "+";
+      }
+    };
+
+    updateCounter();
+  };
+
+  const isInView = (element) => {
+    const rect = element.getBoundingClientRect();
+    return rect.top >= 0 && rect.bottom <= window.innerHeight;
+  };
+
+  const handleScroll = () => {
+    counters.forEach((counter) => {
+      if (isInView(counter) && !counter.classList.contains('counted')) {
+        counter.classList.add('counted');
+        countUp(counter);
+      }
+    });
+  };
+
+  window.addEventListener('scroll', handleScroll);
+  handleScroll(); // Check on page load in case it's already in view
+});
