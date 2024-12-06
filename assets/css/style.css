@@ -479,21 +479,21 @@ body {
 
 .home-hero-subtitle {
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 17px;
   letter-spacing: 1px;
   margin-bottom: 8px;
   color: hsl(0, 100%, 80%);
 }
 
 .home-hero-title {
-  font-size: 24px;
-  line-height: 1.2;
+  font-size: 20px;
+  line-height: 1.1;
   font-weight: bold;
   margin-bottom: 15px;
 }
 
 .home-hero-text {
-  font-size: 14px;
+  font-size: 18px;
   line-height: 1.4;
   margin-bottom: 20px;
 }

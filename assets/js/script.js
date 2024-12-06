@@ -115,19 +115,19 @@ const contentArray = [
     subtitle: "GROWTH ACCELERATOR",
     title: "Explore The Latest Collection",
     text: "Vestibulum rhoncus nisl ac gravida porta. Mauris eu sapien lacus. Etiam molestie justo neque, in convallis massa tempus in.",
-    image: "./assets/images/3919.jpg",
+    image: "./assets/images/hero-1.jpg",
   },
   {
     subtitle: "NEW ARRIVALS",
     title: "Discover Our Exclusive Pieces",
     text: "Curabitur sit amet lectus ac turpis fringilla ultrices. Aliquam erat volutpat.",
-    image: "./assets/images/about-us-banner.jpg",
+    image: "./assets/images/hero-2.jpg",
   },
   {
     subtitle: "LIMITED EDITION",
     title: "Get Yours Before They're Gone",
     text: "Suspendisse potenti. Nullam tincidunt, arcu vel mattis sagittis, nisi elit feugiat elit.",
-    image: "./assets/images/footer-bg.jpg",
+    image: "./assets/images/hero-3.jpg",
   },
 ];
 
