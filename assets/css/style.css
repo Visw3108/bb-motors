@@ -448,9 +448,10 @@ body {
 /*-----------------------------------*\
   #HERO
 \*-----------------------------------*/
+
 .home-hero {
   position: relative;
-  padding-block: 120px;
+  padding-block: 180px;
   color: var(--white);
   background-color: rgba(0, 0, 0, 0.8);
   background-blend-mode: overlay;
@@ -482,14 +483,15 @@ body {
   font-size: 17px;
   letter-spacing: 1px;
   margin-bottom: 8px;
-  color: hsl(0, 100%, 80%);
+  color: var(--white);
 }
 
 .home-hero-title {
-  font-size: 20px;
+  font-size: 32px;
   line-height: 1.1;
   font-weight: bold;
   margin-bottom: 15px;
+  color: var(--international-orange-engineering);
 }
 
 .home-hero-text {
@@ -501,6 +503,8 @@ body {
 .home-hero-button-group {
   display: flex;
   gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .btn {
@@ -545,7 +549,7 @@ body {
 
 .home-hero-image {
   width: 100%;
-  height: auto;
+  height: 120%;
   object-fit: cover;
   position: absolute;
   top: 0;
@@ -566,9 +570,28 @@ body {
   transform: translateY(0);
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1024px) {
   .home-hero {
-    padding-block: 50px;
+    padding-block: 140px;
+  }
+
+  .home-hero-title {
+    font-size: 28px;
+  }
+
+  .home-hero-text {
+    font-size: 16px;
+  }
+
+  .btn {
+    padding: 8px 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-hero {
+    padding-block: 100px;
+    text-align: center;
   }
 
   .home-hero-container {
@@ -576,100 +599,48 @@ body {
   }
 
   .home-hero-title {
-    font-size: 22px;
+    font-size: 24px;
+  }
+
+  .home-hero-text {
+    font-size: 15px;
+  }
+
+  .btn {
+    width: auto;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-hero {
+    padding-block: 80px;
+  }
+
+  .home-hero-subtitle {
+    font-size: 13px;
+  }
+
+  .home-hero-title {
+    font-size: 25px;
   }
 
   .home-hero-text {
     font-size: 12px;
-  }
-
-  .btn {
-    padding: 8px 12px;
-    font-size: 12px;
-  }
-
-  .home-hero-subtitle {
-    font-size: 10px;
-    margin-bottom: 6px;
   }
 
   .home-hero-button-group {
-    gap: 8px;
-  }
-}
-
-@media (max-width: 768px) {
-  .home-hero {
-    padding-block: 60px;
-  }
-
-  .home-hero-title {
-    font-size: 26px;
-  }
-
-  .home-hero-text {
-    font-size: 13px;
+    justify-content: center;
+    gap: 10px;
   }
 
   .btn {
-    padding: 10px 14px;
-    font-size: 13px;
-  }
-
-  .home-hero-subtitle {
-    font-size: 11px;
-    margin-bottom: 7px;
+    font-size: 14px;
+    padding: 6px 12px;
+    flex-grow: 1;
   }
 }
 
-@media (max-width: 1024px) {
-  .home-hero {
-    padding-block: 20px;
-  }
-
-  .home-hero-subtitle {
-    margin-top: 35px;
-  }
-
-  .home-hero-title {
-    font-size: 17px;
-  }
-
-  .home-hero-text {
-    font-size: 10px;
-  }
-
-  .btn {
-    padding: 10px 16px;
-    font-size: 10px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .home-hero-title {
-    font-size: 48px;
-  }
-
-  .home-hero-text {
-    font-size: 16px;
-  }
-
-  .btn {
-    padding: 12px 20px;
-    font-size: 16px;
-  }
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
 
 
