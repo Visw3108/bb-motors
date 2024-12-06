@@ -103,3 +103,64 @@ document.addEventListener("DOMContentLoaded", function() {
   window.addEventListener('scroll', handleScroll);
   handleScroll(); // Check on page load in case it's already in view
 });
+
+
+
+/* HERO */
+
+
+// Content data with images
+const contentArray = [
+  {
+    subtitle: "GROWTH ACCELERATOR",
+    title: "Explore The Latest Collection",
+    text: "Vestibulum rhoncus nisl ac gravida porta. Mauris eu sapien lacus. Etiam molestie justo neque, in convallis massa tempus in.",
+    image: "./assets/images/3919.jpg",
+  },
+  {
+    subtitle: "NEW ARRIVALS",
+    title: "Discover Our Exclusive Pieces",
+    text: "Curabitur sit amet lectus ac turpis fringilla ultrices. Aliquam erat volutpat.",
+    image: "./assets/images/about-us-banner.jpg",
+  },
+  {
+    subtitle: "LIMITED EDITION",
+    title: "Get Yours Before They're Gone",
+    text: "Suspendisse potenti. Nullam tincidunt, arcu vel mattis sagittis, nisi elit feugiat elit.",
+    image: "./assets/images/footer-bg.jpg",
+  },
+];
+
+let currentIndex = 0;
+
+function changeHeroContent() {
+  const heroSection = document.querySelector('.home-hero');
+  const heroContent = document.getElementById('heroContent');
+  const heroImage = document.getElementById('heroImage');
+
+  // Remove the active class to trigger fade-out effect
+  heroSection.classList.remove('active');
+
+  // Wait for the fade-out animation to complete before updating content
+  setTimeout(() => {
+    // Update content
+    heroContent.querySelector('.home-hero-subtitle').textContent = contentArray[currentIndex].subtitle;
+    heroContent.querySelector('.home-hero-title').textContent = contentArray[currentIndex].title;
+    heroContent.querySelector('.home-hero-text').textContent = contentArray[currentIndex].text;
+
+    // Update image
+    heroImage.src = contentArray[currentIndex].image;
+
+    // Add the active class to trigger fade-in effect
+    heroSection.classList.add('active');
+
+    // Cycle to the next content
+    currentIndex = (currentIndex + 1) % contentArray.length;
+  }, 500); // Wait for fade-out transition (800ms) to complete
+}
+
+// Run changeHeroContent on page load and set interval
+document.addEventListener("DOMContentLoaded", () => {
+  changeHeroContent();
+  setInterval(changeHeroContent, 5000); // Change content every 5 seconds
+});

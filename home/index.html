@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero Section</title>
+</head>
+<style>
+    body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.hero-section {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    text-align: center;
+}
+
+.hero-content {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s, transform 1s;
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.hero-section.active .hero-content {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.hero-section.active .hero-image {
+    opacity: 1;
+}
+
+</style>
+<body>
+    <section class="hero-section">
+        <div class="hero-content" id="heroContent">
+            <h1 class="hero-title">Welcome to Our Site</h1>
+            <p class="hero-text">Your journey begins here.</p>
+        </div>
+        <img src="/assets/images/3919.jpg" alt="Hero Image" class="hero-image" id="heroImage">
+    </section>
+
+    <script>
+        const contentArray = [
+    { title: "Welcome to Our Site", text: "Your journey begins here.", image: "/assets/images/3919.jpg" },
+    { title: "Discover New Adventures", text: "Explore the world of opportunities.", image: "/assets/images/3919.jpg" },
+    { title: "Join Us Now", text: "Become part of our growing community.", image: "/assets/images/3919.jpg" }
+];
+
+let currentIndex = 0;
+
+function changeContent() {
+    currentIndex = (currentIndex + 1) % contentArray.length;
+    const heroSection = document.querySelector('.hero-section');
+    const heroContent = document.getElementById('heroContent');
+    const heroImage = document.getElementById('heroImage');
+
+    heroSection.classList.remove('active');
+
+    setTimeout(() => {
+        heroContent.querySelector('.hero-title').textContent = contentArray[currentIndex].title;
+        heroContent.querySelector('.hero-text').textContent = contentArray[currentIndex].text;
+        heroImage.src = contentArray[currentIndex].image;
+
+        heroSection.classList.add('active');
+    }, 1000);
+}
+
+// Change content every 5 seconds
+setInterval(changeContent, 5000);
+
+// Initial content load
+changeContent();
+
+    </script>
+</body>
+</html>
