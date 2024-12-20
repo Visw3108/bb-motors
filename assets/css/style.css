@@ -451,7 +451,7 @@ body {
 
 .home-hero {
   position: relative;
-  padding-block: 180px;
+  padding-block: 120px;
   color: var(--white);
   background-color: rgba(0, 0, 0, 0.8);
   background-blend-mode: overlay;

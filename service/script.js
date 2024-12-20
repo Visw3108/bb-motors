@@ -61,3 +61,7 @@ brands.forEach((brand) => {
 
 // Start the carousel with a pause between movements
 setInterval(moveCarousel, 2000); // Adjust interval (ms) for pause timing
+
+
+
+
