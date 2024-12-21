@@ -1255,9 +1255,9 @@ body {
 .footer-section h4 {
   font-size: 2.2rem;
   margin-bottom: 15px;
-  color: #ffa500;
+  color: var(--international-orange-engineering);
   text-transform: uppercase;
-  border-bottom: 1px solid #ffa500;
+  border-bottom: 1px solid var(--international-orange-engineering);
   padding-bottom: 5px;
   display: inline-block;
   font-family: var(--ff-chakra-petch);
@@ -1290,12 +1290,12 @@ body {
   bottom: -2px;
   width: 0;
   height: 2px;
-  background-color: #ffa500;
+  background-color: var(--international-orange-engineering);
   transition: width 0.3s ease, left 0.3s ease;
 }
 
 .footer-section ul li a:hover {
-  color: #ffa500;
+  color: var(--international-orange-engineering);
 }
 
 .footer-section ul li a:hover::before {
@@ -1331,8 +1331,8 @@ body {
 .icon {
   width: 40px;
   height: 40px;
-  background: radial-gradient(circle, #ffa500, #151a24);
-  border: 2px solid #ffa500;
+  background: radial-gradient(circle, var(--international-orange-engineering), #151a24);
+  border: 2px solid var(--international-orange-engineering);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -1342,7 +1342,7 @@ body {
 
 .icon:hover {
   transform: scale(1.2);
-  box-shadow: 0 0 15px #ffa500;
+  box-shadow: 0 0 15px var(--international-orange-engineering);
 }
 
 /* Footer Bottom */
